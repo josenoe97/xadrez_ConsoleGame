@@ -2,12 +2,12 @@
 
 namespace xadrez_console.tabuleiro
 {
-    internal class Peca
+    abstract class Peca
     {
         public Posicao posicao { get; set; }
         public Cor cor { get; set; }
         public int qteMovimentos { get; protected set; }
-        public Tabuleiro tab { get; set; }
+        public Tabuleiro tab { get;protected set; }
 
         public Peca(Tabuleiro tab, Cor cor)
         {
@@ -21,5 +21,7 @@ namespace xadrez_console.tabuleiro
         {
             qteMovimentos++;
         }
+
+        public abstract bool[,] movimentosPossiveis();
     }
 }
