@@ -146,7 +146,9 @@ namespace xadrez
 
             Peca p = tab.peca(destino);
 
-            // #jogadaespecial promocao
+            // #jogadaespecial promocao 
+            // transformacao de uma peca de uma class para outra class ex: um peao ao chegar na linha 0 ganha uma promocao
+            // no caso a peca em promocao do peao será Dama, futuramente realizarei uma implementacao de poder escolher a peca
             if (p is Peao)
             {
                 if ((p.cor == Cor.Branca && destino.linha == 0) || (p.cor == Cor.Preta && destino.linha == 7))
